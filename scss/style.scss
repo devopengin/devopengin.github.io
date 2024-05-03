@@ -1,0 +1,241 @@
+@import "./variables.scss", "./extend.scss", "./mixins.scss";
+body {
+  @extend %body;
+}
+html.noscroll{
+  overflow: hidden;
+}
+.dispayFlex-center {
+  display: flex;
+  align-items: center;
+}
+header {
+  height: 65px;
+  border-bottom: 1px solid #ffffff;
+}
+.logo {
+  justify-content: center;
+  a {
+    color: $links;
+    text-decoration: none;
+  }
+}
+.menu,
+.nav-menu,
+.buttons_in_menu {
+  display: flex;
+}
+.menu {
+  @extend %menu;
+}
+.nav-menu {
+  @extend %nav-menu;
+}
+.points {
+  @extend %points-menu;
+}
+.buttons_in_menu {
+  cursor: pointer;
+  .basket {
+    margin-left: 8px;
+  }
+  .callme {
+    margin-left: 8px;
+  }
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+  height: 35px;
+}
+.bar {
+  @extend %bar;
+}
+.active:before {
+  @extend %active_before;
+}
+footer {
+  justify-content: center;
+  height: 210px;
+  margin-top: 30px;
+  .block {
+    width: 900px;
+    flex-direction: column;
+    .firstLine {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      div {
+        a {
+          color: #ffffff;
+          text-decoration: none;
+        }
+      }
+      &:last-child {
+        text-align: center;
+      }
+    }
+    .secondLine {
+      margin-top: 30px;
+      .Icons {
+        display: flex;
+        .firstIcon {
+          padding: 16px;
+        }
+      }
+    }
+  }
+}
+.modal,
+.modal2 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+}
+
+.modal-content {
+  @extend %modal_content;
+}
+.close {
+  @extend %close;
+  &:hover,
+  &:focus {
+    @extend %button_close;
+  }
+}
+form .title,
+.subtitle {
+  color: #eee;
+  font-family: $font_Oswald;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+.subtitle {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.input-container {
+  height: 50px;
+  position: relative;
+}
+.ic1 {
+  margin-top: 40px;
+}
+.ic2 {
+  margin-top: 30px;
+}
+.cut {
+  background-color: #000000;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 76px;
+}
+.input {
+  @extend %input;
+}
+.placeholder {
+  color: #adadad;
+  font-family: $font_Oswald;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+.submit {
+  background-color: #fa0202;
+  border-radius: 12px;
+  box-sizing: border-box;
+  color: #eee;
+  border: 0;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  outline: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.month-cvv {
+  display: flex;
+}
+.after-payment {
+  font-family: $font_Oswald;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #adadad;
+}
+.cut1 {
+  background-color: #000000;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 90px;
+}
+.cut1-short {
+  width: 50px;
+}
+.cut1-middle {
+  width: 70px;
+}
+.close2 {
+  @extend %close;
+  &:hover,
+  &:focus {
+    @extend %button_close;
+  }
+}
+@media (max-width: 1010px) {
+  .menu {
+    width: 90%;
+  }
+}
+@media (max-width: 940px) {
+  .hamburger {
+    @include hamburger;
+  }
+  .buttons_in_menu {
+    margin-right: 20px;
+  }
+  .points {
+    @include points_mobile;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile svg,
+  .basket svg,
+  .callme svg {
+    width: 25pt;
+    height: 25pt;
+  }
+  .firstLine {
+    flex-direction: column;
+    align-items: center;
+  }
+  .modal,
+  .modal2 {
+    zoom: 80%;
+  }
+}

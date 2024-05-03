@@ -1,0 +1,142 @@
+@import "./variables";
+%button_close{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+%close{
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+%modal_content{
+  background-color: #000000;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 20px;
+}
+%body{
+  background-color: black;
+  color: $body_color;
+  font-family:$font_Oswald;
+  margin:8px;
+}
+%bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
+}
+
+%input{
+  background-color: #363636;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+  &:focus ~ .cut,
+&:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+  color: #dc2f55;
+}
+&:focus ~ .placeholder,
+&:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+  color: #dc2f55;
+}
+&:focus ~ .cut1,
+&:not(:placeholder-shown) ~ .cut1 {
+  transform: translateY(8px);
+}
+}
+
+
+%button_first_taycan{
+  font-family: $font_Oswald;
+  border: none;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 156px;
+  height: 48px;
+  border-radius: 40px;
+}
+%points-menu{
+  list-style: none;
+      display: flex;
+      align-items: center;
+      li {
+        margin-right: 5px;
+        margin-left: 36px;
+        list-style-type: none;
+    
+        &:first-child {
+          margin-left: 0;
+        }
+    
+        &:last-child {
+          margin-right: 32px;
+        }
+    
+        a {
+          font-family: $font_Oswald;
+          padding: 10px;
+          font-weight: 250;
+          display: block;
+          text-decoration: none;
+          color: $links;
+          font-size: 14px;
+          line-height: 21px;
+          position: relative;
+    
+          &:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 0%;
+            content: ".";
+            color: transparent;
+            background: #dc0707;
+            height: 1px;
+            transition: all 0.5s;
+          }
+    
+          &:hover:after {
+            width: 100%;
+          }
+        }
+      }
+}
+%nav-menu{
+  justify-content: space-around;
+  padding-top: 12px;
+  height: 40px;
+}
+%active_before{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  content: ".";
+  color: transparent;
+  background: #dc0707;
+  height: 1px;
+}
+%menu{
+  justify-content: flex-end;
+  align-items: center;
+}

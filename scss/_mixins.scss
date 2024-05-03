@@ -1,0 +1,40 @@
+@import './variables.scss';
+@mixin hamburger {
+    display: block;
+  
+    &.active-hamburger {
+      .bar {
+        &:nth-child(2) {
+          opacity: 0;
+        }
+  
+        &:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+  
+        &:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+    }
+  }
+@mixin points_mobile{
+  z-index: 3;
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: rgb(5, 5, 5);
+    width: 100%;
+    transition: 0.3s;
+    &.active-hamburger {
+      left: 0;
+      z-index: 100;
+    }
+    li {
+      margin: 16px 0;
+      &:last-child {
+        margin: 16px 0;
+      }
+    }
+}

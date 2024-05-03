@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+* {
+  padding: 0;
+}
+
+main {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.main-page {
+  padding: 20px 0 10px 0;
+  flex-direction: column;
+}
+
+.photo-car {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 1050px;
+  height: 510px;
+  background: url(../images/porsche\ 1.jpg);
+  background-size: cover;
+}
+
+.head-text {
+  position: relative;
+  font-family: "Oswald";
+  font-weight: 960;
+  font-size: 40px;
+  line-height: 70px;
+  letter-spacing: -1.5px;
+  width: 100vw;
+  max-width: 462px;
+  margin: 10px auto;
+  color: #ffffff;
+}
+
+.add-text {
+  margin: 0 auto;
+  position: relative;
+  font-family: "Oswald";
+  opacity: 0.9;
+  font-weight: 320;
+  font-size: 21px;
+  line-height: 22px;
+  max-width: 896px;
+  height: 72px;
+}
+
+.button-first {
+  cursor: pointer;
+  border: none;
+  background-color: #e51a1a;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  width: 156px;
+  height: 48px;
+  margin: 20px auto;
+}
+.button-first:active {
+  transform: scale(0.9);
+  transition: all 0.075s ease-in-out;
+}
+
+.zagol {
+  padding-left: 15px;
+  font-family: "Oswald";
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+.text-after {
+  display: inline-block;
+  font-family: "Oswald";
+  font-weight: 400;
+  line-height: 26px;
+  text-align: justify;
+  color: #adadad;
+  padding: 10px;
+}
+
+.gallery-of-cars {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+.gallery-of-cars section {
+  flex: 1 1 200px;
+  text-align: center;
+}
+.gallery-of-cars section img {
+  width: 190px;
+  height: 99px;
+  border-radius: 12px;
+}
+.gallery-of-cars section p {
+  padding-top: 20px;
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #adadad;
+}
+
+.about-founder {
+  justify-content: space-between;
+  height: 150px;
+}
+
+.main-description {
+  display: flex;
+}
+.main-description .descriptions {
+  margin-left: 16px;
+}
+.main-description .descriptions h1 {
+  font-family: "Oswald";
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+}
+.main-description .descriptions p {
+  margin: 0;
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: #adadad;
+}
+
+.Founders {
+  width: 100%;
+}
+
+.description {
+  margin-top: 20px;
+}
+
+.dec {
+  border: none;
+  padding: 0px 16px;
+  width: 180px;
+  height: 40px;
+  background: #f5f0f0;
+  border-radius: 12px;
+  font-family: "Oswald";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: #171212;
+}
+.dec:hover {
+  background-color: #e51a1a;
+}
+
+.dec,
+a {
+  text-decoration: none;
+  color: #171212;
+}
+
+@media (max-width: 1220px) {
+  .main-main-page {
+    overflow-x: hidden;
+  }
+  .photo-car {
+    background-position: center center;
+    max-width: 100vw;
+    text-align: center;
+  }
+  .description {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+  }
+  .about-founder {
+    flex-wrap: wrap;
+    padding-bottom: 60px;
+  }
+  .main-description {
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 680px) {
+  .photo-car {
+    height: 250px;
+  }
+  .head-text {
+    font-size: 25px;
+    margin-bottom: 0px;
+    top: 240px;
+  }
+  .add-text,
+  .description {
+    margin-bottom: 20px;
+  }
+  .button-first {
+    position: relative;
+    top: 125px;
+  }
+  .gallery-of-cars section {
+    max-width: 100%;
+  }
+  .main-description,
+  .add-text {
+    width: 100%;
+  }
+  .add-text {
+    opacity: 0;
+  }
+  .description {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 430px) {
+  .after-payment {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .add-text {
+    opacity: 0;
+  }
+  .about-founder:last-child {
+    margin-top: 50px;
+  }
+  .head-text {
+    position: absolute;
+  }
+  .button-first {
+    margin-top: 200px;
+    position: relative;
+    top: 110px;
+  }
+  .photo-car {
+    height: 180px;
+  }
+}

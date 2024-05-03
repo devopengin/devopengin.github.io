@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import "./variables.scss", "./extend.scss", "./mixins.scss";
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  .main-main-page,
+  .main-page {
+    display: flex;
+  }
+  
+  .main-page {
+    padding: 20px;
+    flex-direction: column;
+    margin: 0 auto;
+    h1 {
+      margin-top: 100px;
+      font-weight: 650;
+      font-size: 36px;
+      line-height: 45px;
+      letter-spacing: -1.2px;
+      color: #ffffff;
+      padding-bottom: 40px;
+    }
+  }
+  .photo-car {
+    background: url(../images-second-page/porsche911.jpg);
+  }
+.photo-car-taycan, .photo-car {
+  height: 510px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.head-text,
+.head-text-taycan {
+  font-weight: 550;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -1.5px;
+  color: #ffffff;
+}
+.description_car{
+  padding: 20px;
+}
+.description_car,
+.add-text {
+  p {
+    font-weight: 300;
+    opacity: 0.9;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+  }
+}
+
+.gallery,
+.gallery-cars {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  section {
+    margin-bottom: 15px;
+    img {
+      border-radius: 10px;
+      width: 302px;
+      height: 170px;
+    }
+  }
+}
+.gallery section {
+  .first-text {
+    font-family: $font_Oswald;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+  }
+  .second-text {
+    font-family:$font_Oswald;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #adadad;
+    margin: 0;
+  }
+}
+.text-about {
+  margin: 16px 0px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.photo-car-taycan {
+  margin-top: 30px;
+  min-height: 540px;
+  background: url(../images-second-page/taycan.jpg);
+  background-size: cover;
+  background-position: right;
+}
+.text-taycan {
+  margin-left: 56px;
+}
+
+.add-text-taycan {
+  padding-bottom: 20px;
+  font-family:$font_Oswald;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.button-first-taycan1, .button-first-taycan2 {
+  @extend %button_first_taycan;
+  background-color: #000000;
+  border:1px solid white;
+}
+
+.button-first-taycan2 {
+border:none;
+  background-color: #363636;
+  margin-left: 12px;
+}
+.buttons,
+.buttons-buy {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery-cars {
+  margin-top: 28px;
+  justify-content: space-between;
+  section {
+    img {
+      border-radius: 10px;
+      width: 302px;
+      height: 170px;
+    }
+  }
+}
+.buttons-buy {
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid white;
+  padding: 7px 15px;
+  font-weight: 200;
+  border-radius: 30px;
+  width: 60px;
+  &:hover {
+    border: 1px solid #000000;
+    background-color: #e51a1a;
+    transition: all 0.2s ease-in-out;
+  }
+  &:active {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 1220px) {
+  .photo-car {
+    background-size: contain;
+    background-position: center;
+  }
+  .description_car {
+    margin: 0 49px 24px 55px;
+  }
+  .gallery,
+  .gallery-cars {
+    justify-content: space-around;
+  }
+  .photo-car-taycan {
+    margin-top: 50px;
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-cars section:last-child,
+  .gallery section {
+    margin-top: 10px;
+  }
+  .buttons {
+    justify-content: center;
+  }
+  .text-taycan {
+    margin-left: 30px;
+  }
+  .photo-car,
+  .porsche-taycan {
+    justify-content: flex-end;
+  }
+  .photo-car {
+
+    background-position: top;
+  }
+  .photo-car-taycan {
+    min-height: 480px;
+  }
+  .head-text-taycan {
+    font-size: 28px;
+  }
+  .main-page {
+    padding: 10px 0;
+    h1 {
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+  .description-car {
+    height: 140px;
+    width: 100%;
+  }
+  .description-car .head-text {
+    font-size: 35px;
+  }
+  .description-car .add-text {
+    text-align: justify;
+  }
+  .container1 {
+    width: 80vw;
+  }
+  .button-car {
+    margin-right: 0;
+    width: 70%;
+  }
+  .p1_911 {
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 430px) {
+  .description_car {
+    margin: 0;
+  }
+  .firstLine {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .firstLine div {
+    padding: 2px;
+    font-size: 14px;
+  }
+  .after-payment {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .button-first-taycan2 {
+    margin-left: 0;
+  }
+    .gallery, .gallery-cars {
+        justify-content: center;
+    }
+}
+

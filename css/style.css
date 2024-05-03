@@ -1,0 +1,374 @@
+.close2:hover, .close2:focus, .close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close2, .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-content {
+  background-color: #000000;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 20px;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Oswald";
+  margin: 8px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
+}
+
+.input {
+  background-color: #363636;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+.input:focus ~ .cut, .input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+  color: #dc2f55;
+}
+.input:focus ~ .placeholder, .input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+  color: #dc2f55;
+}
+.input:focus ~ .cut1, .input:not(:placeholder-shown) ~ .cut1 {
+  transform: translateY(8px);
+}
+
+.points {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.points li {
+  margin-right: 5px;
+  margin-left: 36px;
+  list-style-type: none;
+}
+.points li:first-child {
+  margin-left: 0;
+}
+.points li:last-child {
+  margin-right: 32px;
+}
+.points li a {
+  font-family: "Oswald";
+  padding: 10px;
+  font-weight: 250;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  line-height: 21px;
+  position: relative;
+}
+.points li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #dc0707;
+  height: 1px;
+  transition: all 0.5s;
+}
+.points li a:hover:after {
+  width: 100%;
+}
+
+.nav-menu {
+  justify-content: space-around;
+  padding-top: 12px;
+  height: 40px;
+}
+
+.active:before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  content: ".";
+  color: transparent;
+  background: #dc0707;
+  height: 1px;
+}
+
+.menu {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+html.noscroll {
+  overflow: hidden;
+}
+
+.dispayFlex-center {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  height: 65px;
+  border-bottom: 1px solid #ffffff;
+}
+
+.logo {
+  justify-content: center;
+}
+.logo a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu,
+.nav-menu,
+.buttons_in_menu {
+  display: flex;
+}
+
+.buttons_in_menu {
+  cursor: pointer;
+}
+.buttons_in_menu .basket {
+  margin-left: 8px;
+}
+.buttons_in_menu .callme {
+  margin-left: 8px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  height: 35px;
+}
+
+footer {
+  justify-content: center;
+  height: 210px;
+  margin-top: 30px;
+}
+footer .block {
+  width: 900px;
+  flex-direction: column;
+}
+footer .block .firstLine {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer .block .firstLine div a {
+  color: #ffffff;
+  text-decoration: none;
+}
+footer .block .firstLine:last-child {
+  text-align: center;
+}
+footer .block .secondLine {
+  margin-top: 30px;
+}
+footer .block .secondLine .Icons {
+  display: flex;
+}
+footer .block .secondLine .Icons .firstIcon {
+  padding: 16px;
+}
+
+.modal,
+.modal2 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+}
+
+form .title,
+.subtitle {
+  color: #eee;
+  font-family: "Oswald";
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.subtitle {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.input-container {
+  height: 50px;
+  position: relative;
+}
+
+.ic1 {
+  margin-top: 40px;
+}
+
+.ic2 {
+  margin-top: 30px;
+}
+
+.cut {
+  background-color: #000000;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 76px;
+}
+
+.placeholder {
+  color: #adadad;
+  font-family: "Oswald";
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+
+.submit {
+  background-color: #fa0202;
+  border-radius: 12px;
+  box-sizing: border-box;
+  color: #eee;
+  border: 0;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  outline: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.month-cvv {
+  display: flex;
+}
+
+.after-payment {
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #adadad;
+}
+
+.cut1 {
+  background-color: #000000;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 90px;
+}
+
+.cut1-short {
+  width: 50px;
+}
+
+.cut1-middle {
+  width: 70px;
+}
+
+@media (max-width: 1010px) {
+  .menu {
+    width: 90%;
+  }
+}
+@media (max-width: 940px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active-hamburger .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active-hamburger .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active-hamburger .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .buttons_in_menu {
+    margin-right: 20px;
+  }
+  .points {
+    z-index: 3;
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: rgb(5, 5, 5);
+    width: 100%;
+    transition: 0.3s;
+  }
+  .points.active-hamburger {
+    left: 0;
+    z-index: 100;
+  }
+  .points li {
+    margin: 16px 0;
+  }
+  .points li:last-child {
+    margin: 16px 0;
+  }
+}
+@media (max-width: 480px) {
+  .profile svg,
+  .basket svg,
+  .callme svg {
+    width: 25pt;
+    height: 25pt;
+  }
+  .firstLine {
+    flex-direction: column;
+    align-items: center;
+  }
+  .modal,
+  .modal2 {
+    zoom: 80%;
+  }
+}

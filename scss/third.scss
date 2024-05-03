@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import "./variables", "./extend.scss", "./mixins.scss";
+
+*{
+  padding: 0;
+  margin: 0;
+}
+html{
+  overflow-x: hidden;
+  font-family: "Oswald";
+}
+
+.main-main-page {
+  display: flex;
+}
+.container1 {
+  width: 290px;
+  margin: 80px auto;
+}
+.container2 {
+  margin: 0 auto;
+}
+.button-car {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #adadad;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  width: 275px;
+  background: #363636;
+  border-radius: 12px;
+}
+
+.main_car {
+  margin-top: 20px;
+  width: 950px;
+  img {
+    border-radius: 10px;
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+  }
+}
+.description_of_main_car {
+  h1 {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    color: #ffffff;
+  }
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #adadad;
+  }
+}
+.product_cards h1{
+  padding: 20px 0;
+}
+.product_cards_with_description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  p {
+    margin-top: 30px;
+  }
+  img {
+    display: block;
+    width: 460px;
+    height: 438px;
+  }
+}
+
+.description_of_machine_models_h1_car {
+  padding-top: 15px;
+  height: 60px;
+  font-weight: 700;
+  font-size: 22px;
+  color: #ffffff;
+}
+.description_of_machine_models_p1_car {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 28px;
+  color: #adadad;
+}
+
+.active_for_cars {
+  background-color: #ffffff;
+  color: black;
+}
+
+.buttonsBuy {
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid white;
+  padding: 7px 15px;
+  font-weight: 200;
+  border-radius: 30px;
+  width: 60px;
+  z-index: 1;
+  &:hover {
+    border: 1px solid #000000;
+    background-color: #e51a1a;
+    transition: all 0.2s ease-in-out;
+  }
+  &:active {
+    transform: scale(0.8);
+  }
+}
+
+.price_button {
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+footer{
+  justify-content: center;
+  margin-top: 150px;
+  height:210px;
+}
+
+@media (max-width: 1220px) {
+  .card {
+    margin-top:10px;
+  }
+  .main-main-page {
+    flex-direction: column;
+  }
+  .container1 {
+    display: flex;
+    width: 80vw;
+  }
+  .main_car {
+    max-width: 80vw;
+    img {
+      height: auto;
+    }
+  }
+  footer{
+    margin-top: 25em;
+  }
+  .button-car {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+
+  .card {
+    &:last-child {
+      padding-left: 10px;
+    }
+    img {
+      max-width: 100%;
+      height: 100%;
+    }
+    p {
+      margin-top: 3rem;
+    }
+  }
+  .description_of_machine_models {
+    padding-bottom: 40px;
+    margin-top: 60px;
+  }
+  .description_of_machine_models_h1_car {
+    font-size: 1.5rem;
+  }
+  .description_of_machine_models_p1_car {
+    word-break: break-all;
+  }
+  .description_of_main_car {
+    h1 {
+      margin-top: 1.55rem;
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+      word-break: break-all;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  footer{
+    margin-top: 14em;
+  }
+  .modal2 {
+    width: 70%;
+  }
+  .container1 {
+    margin: 10px auto;
+  }
+  .button-car {
+    margin-right: 3px;
+  }
+}
+
+@media (max-width: 430px) {
+  .logo figure svg{
+    width:60pt;
+    height: 60pt;
+  }
+  .profile svg, .basket svg, .callme svg{
+    width: 28pt;
+    height: 28pt;
+  }
+  .after-payment {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .card {
+    &:last-child {
+      padding-left: 0;
+    }
+  }
+  .description_of_machine_models_p1_car {
+    font-size: 0.9rem;
+  }
+  .product_cards_with_description {
+    display: flex;
+    flex-direction: column;
+  }
+  .container1 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .button-car {
+    font-size: 0.85rem;
+    width: 80%;
+  }
+}
